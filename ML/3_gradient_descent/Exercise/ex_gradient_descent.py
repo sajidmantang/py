@@ -11,7 +11,7 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 import math
 
-def predict_using_sklean():
+def predict_using_sklern():
     df = pd.read_csv("test_scores.csv")
     r = LinearRegression()
     r.fit(df[['math']],df.cs)
@@ -48,6 +48,6 @@ if __name__ == "__main__":
     m, b = gradient_descent(x,y)
     print("Using gradient descent function: Coef {} Intercept {}".format(m, b))
 
-    m_sklearn, b_sklearn = predict_using_sklean()
+    m_sklearn, b_sklearn = predict_using_sklern()
     print("Using sklearn: Coef {} Intercept {}".format(m_sklearn,b_sklearn))
 
